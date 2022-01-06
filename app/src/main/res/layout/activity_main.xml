@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalkulator Bagus"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_marginVertical="20dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:id="@+id/input1"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/r_tambah"
+            android:layout_width="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"
+            android:text="Tambah"/>
+        <RadioButton android:id="@+id/r_kurang"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"
+            android:text="Kurang"/>
+        <RadioButton android:id="@+id/r_kali"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"
+            android:text="Kali"/>
+        <RadioButton android:id="@+id/r_bagi"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onRadioButtonClicked"
+            android:layout_height="wrap_content"
+            android:text="Bagi"/>
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:id="@+id/input2"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btn_hitung"
+        android:layout_height="wrap_content"
+        android:text="Hitung"
+        android:backgroundTint="@color/btn_secondary"
+        android:layout_margin="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:id="@+id/hasil"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rv_history"
+        />
+
+</LinearLayout>
